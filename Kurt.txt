@@ -1,0 +1,35 @@
+Hello Kurt,
+
+1.	The AC system is for whole PEGA building, that’s hard to verify the variance of AC system. But I think if the verify is necessary we will check this after DV stage,  because there are four project ongoing (Montego, Morro, Vallejo, Arias), the anechoic room schedule is very busy right now.
+
+In addition, the AC system noise at low frequency under the 100 Hz that means just a few frequencies would be inference no matter the SFI(dBA/ Hz) or Zwicker(Sone/ Bark Scale) result.
+
+2.	Timeline for EVA test pass
+#GMT+8
+Internal MIC / System noise/ BT: Validation result will be renewed on sharepoint & CTX in 7/12.
+HDMI audio/ Type-C audio: Validation result will be renewed on sharepoint & CTX in 7/16.
+Internal SPK : RTK SPK Voltage tuning tool still have some bug, I will keep tracing.
+Internal SPL&MIC-Electrical: DUT has been sent to RTK, but same as Internal SPK, the voltage tuning tool still has some problem.
+
+3.	About the system noise Rms vs Time, there is some issues I wanna discuss.
+
+The figure fellow below is the chart including limit in system noise report template. The Limit is 18 dBSPL.
+ 
+
+But here is Audio precision Rms vs Time item, as you can see, the time domain measure result would locate between in 30~60 dBSPL. It shows the limit in report template is the measurement with A-weighting.
+
+ 
+
+Realtime system noise without A-weighting:
+ 
+Realtime system noise with A-weighting:
+ 
+
+We can’t measure RMS vs Time with A-weighting, cause the SFI & Zwicker transfer tool that provide by Microsoft will add the A-weighting in process automatic and can’t turn off that.
+If we need to add Rms vs Time may need to discuss the definition of limit and test step.
+
+In my opinion, the Rms vs Time can’t show the variance in fall/pass result, the below right figure is the fall result, the date locates between in 30~60dBSPL as same as the pass result(right figure).
+I would refer to judge system noise performance by SFI & Zwicker result rather than Rms vs Time.
+  
+
+Thank you and wish you have a good one.
