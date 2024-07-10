@@ -1,0 +1,32 @@
+Hello Kurt,
+
+1.	The AC system is for the whole PEGA building, that’s hard to verify the variance of AC system. But I think if the verification is necessary we will check this after DV stage,  because there are four projects ongoing (Montego, Morro, Vallejo, Arias), and the anechoic room schedule is very busy right now.
+
+In addition, the AC system noise at low frequency under 100 Hz means just a few frequencies would affect the SFI(dBA/ Hz) or Zwicker(Sone/ Bark Scale) result, and the effect of AC noise would become smaller after SFI & Zweiker result summing up.
+
+2.	Timeline for EVA test pass
+#GMT+8
+Internal MIC / System noise/ BT: Validation result will be renewed on sharepoint & CTX in 7/12.
+HDMI audio/ Type-C audio: Validation result will be renewed on sharepoint & CTX in 7/16.
+Internal SPK: RTK SPK Voltage tuning tool still has some bugs, I will keep tracing.
+Internal SPL&MIC-Electrical: DUT has been sent to RTK, but same as Internal SPK, the voltage tuning tool still has some problems.
+
+3.	About the system noise Rms vs Time, there are some issues I wanna discuss.
+
+The figure fellow below is the chart including limit in system noise report template. The Limit is 18 dBSPL.
+ 
+
+Here is the Audio precision Rms vs Time page screenshot, as you can see, the time domain measure result would be between 30~60 dBSPL. It shows the limit in report template is the measurement with A-weighting.
+
+ 
+
+Realtime system noise without A-weighting:
+ 
+Realtime system noise with A-weighting:
+ 
+
+We can’t measure RMS vs Time with A-weighting, cause the SFI & Zwicker transfer tool provided by Microsoft will add the A-weighting in the process automatically and can’t turn off that.
+If we need to add Rms vs Time may need to discuss the definition of limit and test step.
+
+In my opinion, the Rms vs Time can’t show the variance in fall/pass result, the below right figure is the fall result and the date is located between 30~60 dBSPL as same as the pass result(right figure).
+I would refer to judging system noise performance by SFI & Zwicker result rather than Rms vs Time.
